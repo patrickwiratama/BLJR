@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnreg" type="id">btnreg</item>
+    <item name="txtfirstName" type="id">txtfirstName</item>
+    <item name="textlastName" type="id">textlastName</item>
+    <item name="textlemail" type="id">textlemail</item>
+    <item name="textTempatTanggalLahir" type="id">textTempatTanggalLahir</item>
+    <item name="textUniversity" type="id">textUniversity</item>
+    <item name="textYear" type="id">textYear</item>
+    <item name="textMajor" type="id">textMajor</item>
+    <item name="textGender" type="id">textGender</item>
+    <item name="textPassword" type="id">textPassword</item>
+    <item name="textConfirmPassword" type="id">textConfirmPassword</item>
+    <item name="textfirstName" type="id">textfirstName</item>
+    <item name="et_firstName" type="id">firstName</item>
+    <item name="et_lastName" type="id">lastName</item>
+    <item name="et_password" type="id">password</item>
+    <item name="et_confirmPassword" type="id">confirmPassword</item>
+    <item name="et_University" type="id">University</item>
+    <item name="et_Major" type="id">Major</item>
+    <item name="et_Year" type="id">Year</item>
+    <item name="et_email" type="id">email</item>
+    <item name="et_DoB" type="id">DoB</item>
+    <item name="btn_register" type="id">register</item>
+</resources>
