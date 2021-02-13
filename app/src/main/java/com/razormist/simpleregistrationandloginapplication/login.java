@@ -48,7 +48,7 @@ public class Login extends AppCompatActivity {
                 if(checklogin == true){
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Invalid username or password, please try again", Toast.LENGTH_SHORT).show();
                 }
             }
         });
