@@ -18,7 +18,7 @@ public class registrationForm extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_registration_form);
 
         databaseHelper = new DatabaseHelper(this);
         et_firstName = (EditText) findViewById(R.id.et_firstName);
