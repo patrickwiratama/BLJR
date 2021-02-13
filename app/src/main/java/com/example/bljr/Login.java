@@ -1,4 +1,4 @@
-package com.razormist.simpleregistrationandloginapplication;
+package com.example.bljr;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,8 @@ import android.widget.Toast;
 
 import com.example.bljr.DatabaseHelper;
 
-
 public class Login extends AppCompatActivity {
-    Button  btn_login;
+    Button  btn_login, btn_lregister;
     EditText et_userName, et_password;
 
     DatabaseHelper databaseHelper;
@@ -28,15 +27,15 @@ public class Login extends AppCompatActivity {
         et_password = (EditText)findViewById(R.id.et_password);
 
         btn_login = (Button)findViewById(R.id.btn_login);
-        //btn_lregister = (Button)findViewById(R.id.btn_lregister);
+        btn_lregister = (Button)findViewById(R.id.btn_lregister);
 
-       // btn_lregister.setOnClickListener(new View.OnClickListener() {
-          //  @Override
-            //public void onClick(View v) {
-              //  Intent intent = new Intent(Login.this, MainActivity.class);
-                //startActivity(intent);
-           // }
-        //});
+        btn_lregister.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          Intent intent = new Intent(Login.this, MainActivity.class);
+        startActivity(intent);
+         }
+        });
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override

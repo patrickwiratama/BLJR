@@ -22,4 +22,7 @@
     <item name="et_email" type="id">email</item>
     <item name="et_DoB" type="id">DoB</item>
     <item name="btn_register" type="id">register</item>
+    <item name="et_userName" type="id">et_userName</item>
+    <item name="btn_login" type="id">btn_login</item>
+    <item name="btn_lregister" type="id">btn_lregister</item>
 </resources>
