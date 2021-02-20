@@ -14,6 +14,7 @@ public class Login extends AppCompatActivity {
     Button  btn_login, btn_lregister;
     EditText et_userName, et_password;
 
+
     DatabaseHelper databaseHelper;
 
     @Override
@@ -21,12 +22,20 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
         databaseHelper = new DatabaseHelper(this);
 
         et_userName = (EditText)findViewById(R.id.et_userName);
         et_password = (EditText)findViewById(R.id.et_password);
 
         btn_login = (Button)findViewById(R.id.btn_login);
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                checklogin(et_userName.getText().toString(), et_password.getText().toString());
+            }
+        });
+
         btn_lregister = (Button)findViewById(R.id.btn_lregister);
 
         btn_lregister.setOnClickListener(new View.OnClickListener() {
@@ -44,13 +53,27 @@ public class Login extends AppCompatActivity {
                 String password = et_password.getText().toString();
 
                 Boolean checklogin = databaseHelper.CheckLogin(username, password);
-                if(checklogin == true){
+                if (checklogin == true) {
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     Toast.makeText(getApplicationContext(), "Invalid username or password, please try again", Toast.LENGTH_SHORT).show();
                 }
             }
+
         });
+}
+    private int counter;
+
+    private void checklogin(String et_userName, String et_password){
+    if ((et_userName == "Admin") && (et_password == "1234")){
+        Intent intent = new Intent(Login.this, MainActivity.class);
+        startActivity(intent);
+    }else{
+        counter--;
+        if(counter == 0){
+            btn_login.setEnabled(false);
+        }
     }
 
+}
 }
